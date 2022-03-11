@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "kitchen"
+version = "0.1.0"
+description = "simple virtual pizza kitchen simulation"
+authors = ["Artem Grunichev <artem@grunichev.us>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["pizza", "automation", "robotics"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+PyYAML = "^6.0"
+jsonschema = "^4.4.0"
+redis = "^4.1.4"
+
+[tool.poetry.dev-dependencies]
+types-PyYAML = "^6.0.4"
+types-jsonschema = "^4.4.1"
+types-redis = "^4.1.17"
+# These packages are additionally managed by Nix:
+mypy = "^0.931"
+black = "^22.1.0"
+isort = "^5.10.1"
+# 
+pytest = "^7.0.1"
+pytest-xprocess = "^0.18.1"
+pytest-cov = "^3.0.0"
+pytest-integration = "^0.2.2"
+
+[tool.poetry.scripts]
+
+[tool.black]
+line-length = 99
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+addopts = "--basetemp=/tmp/pytest"
+#redis_exec = "redis-server"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

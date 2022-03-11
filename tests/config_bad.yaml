@@ -1,0 +1,28 @@
+# Special communication actions for robots are:
+# - sync - to wait for any oven operator readiness
+# - free - to mark the oven as free
+# Count is 1 by default.
+
+robot_kinds:
+  - &pre-oven-robot
+      kind: robot
+      operations: [ take, sauce, cheese, sync1, to_oven, sync2 ]
+      border_state: freezer
+      reset_state: freezer
+      after_oven: False
+  - &post-oven-robot
+      kind: robot
+      operations: [ bake, from_oven, free, slice, pack, put ]
+      border_state: shelf
+      reset_state: freezer
+      after_oven: True
+
+kitchen:
+  - <<: *pre-oven-robot
+    count: luna
+  - kind: oven
+    count: 2
+  - <<: *post-oven-robot
+    count: 2
+  - kind: camera-system
+    operations: [ sauce, cheese, from_oven, slice, pack ]

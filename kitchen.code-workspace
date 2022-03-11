@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+		"python.formatting.provider": "black",
+		"editor.formatOnSave": true,
+		"python.analysis.typeCheckingMode": "strict",
+		"python.linting.mypyEnabled": true,
+		"python.linting.mypyPath": "${workspaceFolder}/tools-links/mypy",
+		"mypy.dmypyExecutable": "${workspaceFolder}/tools-links/dmypy",
+		"python.sortImports.path": "isort"
+	}
+}

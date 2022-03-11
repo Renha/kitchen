@@ -1,0 +1,78 @@
+{
+    "robot_kinds": [
+        {
+            "kind": "robot",
+            "operations": [
+                "take",
+                "sauce",
+                "cheese",
+                "sync1",
+                "to_oven",
+                "sync2"
+            ],
+            "border_state": "freezer",
+            "reset_state": "freezer",
+            "after_oven": false
+        },
+        {
+            "kind": "robot",
+            "operations": [
+                "bake",
+                "from_oven",
+                "free",
+                "slice",
+                "pack",
+                "put"
+            ],
+            "border_state": "shelf",
+            "reset_state": "freezer",
+            "after_oven": true
+        }
+    ],
+    "kitchen": [
+        {
+            "kind": "robot",
+            "operations": [
+                "take",
+                "sauce",
+                "cheese",
+                "sync1",
+                "to_oven",
+                "sync2"
+            ],
+            "border_state": "freezer",
+            "reset_state": "freezer",
+            "after_oven": false,
+            "count": 2
+        },
+        {
+            "kind": "oven",
+            "count": 2
+        },
+        {
+            "kind": "robot",
+            "operations": [
+                "bake",
+                "from_oven",
+                "free",
+                "slice",
+                "pack",
+                "put"
+            ],
+            "border_state": "shelf",
+            "reset_state": "freezer",
+            "after_oven": true,
+            "count": 2
+        },
+        {
+            "kind": "camera-system",
+            "operations": [
+                "sauce",
+                "cheese",
+                "from_oven",
+                "slice",
+                "pack"
+            ]
+        }
+    ]
+}

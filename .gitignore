@@ -1,0 +1,8 @@
+dump.rdb
+__pycache__
+.mypy_cache
+tools-links
+.DS_Store
+*.pdf
+.coverage*
+.pytest_cache
